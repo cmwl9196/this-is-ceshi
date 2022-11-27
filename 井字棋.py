@@ -36,7 +36,7 @@ def checker(digit):
  
     if digit == 1 and digit in digits:
         digits.remove(digit)
-        ##player1 will play if the value of count is even and for odd player2 will play
+
         if count % 2 == 0:
             mark = 'X'
             panels[digit] = mark
@@ -223,13 +223,13 @@ def checker(digit):
             msg.showinfo("Result", "Player2 wins")
             root.destroy()
  
-    ###if count is greater then 8 then the match has been tied
+
     if (count > 8 and win(panels, 'X') == False and win(panels, 'O') == False):
         msg.showinfo("Result", "Match Tied")
         root.destroy()
  
  
-####define buttons
+
 button1 = Button(root, width=15, font=('Times 16 bold'), height=7, command=lambda: checker(1))
 button1.grid(row=1, column=1)
 button2 = Button(root, width=15, height=7, font=('Times 16 bold'), command=lambda: checker(2))
